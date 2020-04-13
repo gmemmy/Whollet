@@ -47,6 +47,7 @@ const CryptoTextInput = ({
               setHidePassword(false)
             } else {
               setPasswordIcon(icons[1])
+              setHidePassword(true)
             }
           }}
         >

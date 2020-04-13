@@ -21,7 +21,7 @@ const Button = ({
         alignItems: 'center',
         justifyContent: 'center',
         marginTop: 'auto',
-        bottom: getHeight(bottom),
+        marginBottom: getHeight(bottom),
         borderRadius: getWidth(30),
         borderColor: color.PRIMARY_BLUE,
         borderWidth: getWidth(1),
