@@ -14,8 +14,8 @@ interface ScreenProp {
 }
 
 interface TextProp {
-  fontSize: number,
-  color: string,
+  fontSize?: number,
+  color?: string,
   fontFamily: string,
   top?: number,
 }
