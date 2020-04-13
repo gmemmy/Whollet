@@ -10,9 +10,11 @@ const Button = ({
   width,
   top,
   backgroundColor,
+  onPress,
 }: ButtonProp) => {
   return (
     <TouchableOpacity
+      onPress={onPress}
       style={{
         height: getHeight(height),
         width: getWidth(width),

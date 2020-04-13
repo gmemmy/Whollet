@@ -18,14 +18,17 @@ import data from '../screens/onboardingscreens/constants'
 import CryptoText from './Text'
 import Button from './Button'
 
-const OnBoarding = () => {
+const OnBoarding = ({ navigation }: any) => {
   const [activeSlide, setActiveSlide] = useState(0)
 
   const renderItems = ({ item }: any) => {
     return (
       <React.Fragment>
         <View style={styles.topHalf}>
-          <TouchableOpacity style={styles.skipButton}>
+          <TouchableOpacity
+            style={styles.skipButton}
+            onPress={() => navigation.navigate('WelcomeScreen')}
+          >
             {activeSlide != 3 && (
               <CryptoText
                 fontSize={18}
@@ -64,6 +67,11 @@ const OnBoarding = () => {
             {item.subTitle}
           </CryptoText>
           <Button
+            onPress={() =>
+              activeSlide === 3
+                ? navigation.navigate('WelcomeScreen')
+                : setActiveSlide(activeSlide + 1)
+            }
             backgroundColor={
               activeSlide === 3 ? color.PRIMARY_BLUE : color.WHITE
             }
