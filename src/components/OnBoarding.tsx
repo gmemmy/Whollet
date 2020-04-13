@@ -13,13 +13,10 @@ import Carousel, { Pagination } from 'react-native-snap-carousel'
 import data from '../screens/onboardingscreens/constants'
 
 // Images
-const desktop = require('../../assets/illustration/crypto/desktop.png')
 
 // components
 import CryptoText from './Text'
 import Button from './Button'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
-import colors from '../utils/colors'
 
 const OnBoarding = () => {
   const [activeSlide, setActiveSlide] = useState(0)
@@ -39,7 +36,7 @@ const OnBoarding = () => {
               </CryptoText>
             )}
           </TouchableOpacity>
-          <Image source={desktop} style={styles.animatedImage} />
+          <Image source={item.image} style={styles.animatedImage} />
         </View>
         <View style={styles.bottomHalf}>
           <Pagination
