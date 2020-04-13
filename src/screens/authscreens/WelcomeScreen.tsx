@@ -35,7 +35,7 @@ const WelcomeScreen = ({ navigation }: ScreenProp) => {
         height={46}
         width={200}
         backgroundColor={color.WHITE}
-        top={280}
+        bottom={70}
         onPress={() => navigation.navigate('OnBoarding')}
       />
       <View style={styles.signupContainer}>
@@ -48,7 +48,7 @@ const WelcomeScreen = ({ navigation }: ScreenProp) => {
         </CryptoText>
         <TouchableOpacity
           style={{ marginLeft: getWidth(5) }}
-          onPress={() => navigation.navigate('OnBoarding')}
+          onPress={() => navigation.navigate('Login')}
         >
           <CryptoText
             color={color.WHITE}
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   signupContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginTop: getHeight(15),
+    bottom: getHeight(60),
   },
 })
 

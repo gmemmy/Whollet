@@ -10,7 +10,7 @@ import {
 import color from '../utils/colors'
 import { getHeight, getWidth, fontFamily } from '../utils/styles'
 import Carousel, { Pagination } from 'react-native-snap-carousel'
-import data from '../screens/onboardingscreens/constants'
+import data from '../screens/OnBoardingScreens/constants'
 
 // Images
 
@@ -81,7 +81,7 @@ const OnBoarding = ({ navigation }: any) => {
             }
             height={46}
             width={200}
-            top={110}
+            bottom={50}
           />
         </View>
       </React.Fragment>
