@@ -14,7 +14,7 @@ const CryptoText = ({
   return (
     <Text
       style={{
-        fontSize: getWidth(fontSize),
+        fontSize: fontSize,
         color,
         fontFamily,
         marginTop: top,

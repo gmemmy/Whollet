@@ -8,7 +8,7 @@ const Button = ({
   buttonTextColor,
   height,
   width,
-  top,
+  bottom,
   backgroundColor,
   onPress,
 }: ButtonProp) => {
@@ -20,7 +20,8 @@ const Button = ({
         width: getWidth(width),
         alignItems: 'center',
         justifyContent: 'center',
-        marginTop: getHeight(top),
+        marginTop: 'auto',
+        bottom: getHeight(bottom),
         borderRadius: getWidth(30),
         borderColor: color.PRIMARY_BLUE,
         borderWidth: getWidth(1),

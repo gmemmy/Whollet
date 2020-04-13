@@ -28,8 +28,15 @@ interface ButtonProp {
   buttonText: string,
   height: number,
   width: number,
-  top: number,
+  bottom: number,
   backgroundColor: string,
   buttonTextColor: string,
   onPress: function
+}
+
+interface TextInputProp {
+  placeholder: string,
+  height: number,
+  width: number,
+  icons?: Array,
 }
