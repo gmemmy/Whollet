@@ -24,7 +24,7 @@ const WelcomeScreen = ({ navigation }: ScreenProp) => {
       </CryptoText>
       <CryptoText
         color={color.WHITE}
-        fontSize={50}
+        fontSize={40}
         fontFamily={fontFamily.FONT_FAMILY_REGULAR}
       >
         WHOLLET
@@ -35,7 +35,7 @@ const WelcomeScreen = ({ navigation }: ScreenProp) => {
         height={46}
         width={200}
         backgroundColor={color.WHITE}
-        bottom={70}
+        bottom={10}
         onPress={() => navigation.navigate('OnBoarding')}
       />
       <View style={styles.signupContainer}>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   signupContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    bottom: getHeight(60),
+    marginBottom: getHeight(70),
   },
 })
 

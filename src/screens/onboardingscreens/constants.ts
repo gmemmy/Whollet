@@ -6,7 +6,7 @@ const mobile = require('../../../assets/illustration/crypto/mobile.png')
 const screenText = [
   {
     title: 'Welcome To\n Whollet',
-    subTitle: "Manage all your crypto assest! It's simple\n and easy",
+    subTitle: "Manage all your crypto assets! It's simple\n and easy",
     buttonText: 'Next Step',
     image: desktop,
   },

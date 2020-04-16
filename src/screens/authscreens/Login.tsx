@@ -11,66 +11,77 @@ const hidePassword = require('../../../assets/inactive.png')
 import CryptoTextInput from '../../components/TextInput'
 import CryptoText from '../../components/Text'
 import Button from '../../components/Button'
+import KeyboardShift from '../../components/KeyboardShift'
 
 const Login = ({ navigation }: ScreenProp) => {
   return (
-    <View style={styles.container}>
-      <View style={styles.topHalf}>
-        <Image source={loginIllustration} style={styles.loginIllustration} />
-      </View>
-      <View style={styles.bottomHalf}>
-        <CryptoTextInput
-          placeholder="Email Address"
-          height={getHeight(60)}
-          width={getWidth(327)}
-        />
-        <CryptoTextInput
-          placeholder="Password"
-          icons={[showPassword, hidePassword]}
-          height={getHeight(60)}
-          width={getWidth(327)}
-        />
-        <TouchableOpacity style={styles.forgotPasswordButton}>
+    <KeyboardShift>
+      <View style={styles.container}>
+        <View style={styles.topHalf}>
           <CryptoText
-            fontSize={getWidth(13)}
+            fontSize={getWidth(25)}
             fontFamily={fontFamily.FONT_FAMILY_SEMI}
-            color={color.PRIMARY_BLUE}
-          >
-            Forgot your password?
-          </CryptoText>
-        </TouchableOpacity>
-        <Button
-          buttonText="Login"
-          buttonTextColor={color.WHITE}
-          height={46}
-          width={200}
-          backgroundColor={color.PRIMARY_BLUE}
-          bottom={70}
-          onPress={() => navigation.navigate('OnBoarding')}
-        />
-        <View style={styles.signupContainer}>
-          <CryptoText
             color={color.BLACK}
-            fontSize={16}
-            fontFamily={fontFamily.FONT_FAMILY_REGULAR}
+            top={getHeight(60)}
           >
-            Don't have an account?
+            Welcome Back!
           </CryptoText>
-          <TouchableOpacity
-            style={{ marginLeft: getWidth(5) }}
-            onPress={() => navigation.navigate('WelcomeScreen')}
-          >
+          <Image source={loginIllustration} style={styles.loginIllustration} />
+        </View>
+        <View style={styles.bottomHalf}>
+          <CryptoTextInput
+            placeholder="Email Address"
+            height={getHeight(60)}
+            width={getWidth(327)}
+          />
+          <CryptoTextInput
+            placeholder="Password"
+            icons={[showPassword, hidePassword]}
+            height={getHeight(60)}
+            width={getWidth(327)}
+          />
+          <TouchableOpacity style={styles.forgotPasswordButton}>
             <CryptoText
+              fontSize={getWidth(13)}
+              fontFamily={fontFamily.FONT_FAMILY_SEMI}
               color={color.PRIMARY_BLUE}
-              fontSize={16}
-              fontFamily={fontFamily.FONT_FAMILY_BOLD}
             >
-              Sign Up
+              Forgot your password?
             </CryptoText>
           </TouchableOpacity>
+          <Button
+            buttonText="Login"
+            buttonTextColor={color.WHITE}
+            height={46}
+            bottom={15}
+            width={200}
+            backgroundColor={color.PRIMARY_BLUE}
+            onPress={() => navigation.navigate('Verification')}
+          />
+          <View style={styles.signupContainer}>
+            <CryptoText
+              color={color.BLACK}
+              fontSize={16}
+              fontFamily={fontFamily.FONT_FAMILY_REGULAR}
+            >
+              Don't have an account?
+            </CryptoText>
+            <TouchableOpacity
+              style={{ marginLeft: getWidth(5) }}
+              onPress={() => navigation.navigate('WelcomeScreen')}
+            >
+              <CryptoText
+                color={color.PRIMARY_BLUE}
+                fontSize={16}
+                fontFamily={fontFamily.FONT_FAMILY_BOLD}
+              >
+                Sign Up
+              </CryptoText>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
-    </View>
+    </KeyboardShift>
   )
 }
 
@@ -78,9 +89,11 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: color.WHITE,
+    position: 'relative',
+    height: '100%',
+    width: '100%',
   },
   topHalf: {
-    flex: 0.45,
     backgroundColor: color.SKY_BLUE,
     alignItems: 'center',
     justifyContent: 'center',
@@ -91,7 +104,7 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
   },
   bottomHalf: {
-    flex: 0.55,
+    flex: 1,
     alignItems: 'center',
   },
   forgotPasswordButton: {
@@ -102,7 +115,7 @@ const styles = StyleSheet.create({
   signupContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    bottom: getHeight(60),
+    marginBottom: getHeight(70),
   },
 })
 
