@@ -63,7 +63,7 @@ const KeyboardShift = ({ children }: ComponentProp) => {
 const styles = StyleSheet.create({
   container: {
     height: '100%',
-    position: 'relative',
+    position: 'absolute',
     width: '100%',
   },
 })

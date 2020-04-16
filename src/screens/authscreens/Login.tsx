@@ -56,7 +56,7 @@ const Login = ({ navigation }: ScreenProp) => {
             bottom={15}
             width={200}
             backgroundColor={color.PRIMARY_BLUE}
-            onPress={() => navigation.navigate('OnBoarding')}
+            onPress={() => navigation.navigate('Verification')}
           />
           <View style={styles.signupContainer}>
             <CryptoText

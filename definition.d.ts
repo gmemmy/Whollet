@@ -28,10 +28,12 @@ interface ButtonProp {
   buttonText: string,
   height: number,
   width: number,
-  bottom: number,
+  bottom?: number,
   backgroundColor: string,
   buttonTextColor: string,
-  onPress: function
+  onPress: function,
+  position?: string
+  top?: number
 }
 
 interface TextInputProp {

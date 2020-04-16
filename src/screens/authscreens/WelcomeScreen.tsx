@@ -24,9 +24,8 @@ const WelcomeScreen = ({ navigation }: ScreenProp) => {
       </CryptoText>
       <CryptoText
         color={color.WHITE}
-        fontSize={50}
+        fontSize={40}
         fontFamily={fontFamily.FONT_FAMILY_REGULAR}
-        top={getHeight(20)}
       >
         WHOLLET
       </CryptoText>
