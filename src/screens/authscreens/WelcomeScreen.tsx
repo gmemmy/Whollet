@@ -36,7 +36,7 @@ const WelcomeScreen = ({ navigation }: ScreenProp) => {
         width={200}
         backgroundColor={color.WHITE}
         bottom={10}
-        onPress={() => navigation.navigate('OnBoarding')}
+        onPress={() => navigation.navigate('SignUp')}
       />
       <View style={styles.signupContainer}>
         <CryptoText
