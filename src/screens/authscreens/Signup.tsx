@@ -20,6 +20,7 @@ const SignUp = ({ navigation }: ScreenProp) => {
       buttonText="Let's Get Started"
       accountVerificationText="Already have an account?"
       authSwitchButtonText="Login"
+      finishButtonNavigation="CreatePin"
     >
       <CryptoTextInput
         placeholder="First Name"

@@ -22,6 +22,7 @@ const Login = ({ navigation }: ScreenProp) => {
       buttonText="Login"
       accountVerificationText="Don't have an account?"
       authSwitchButtonText="SignUp"
+      finishButtonNavigation="Verification"
     >
       <CryptoTextInput
         placeholder="Email Address"
@@ -34,7 +35,10 @@ const Login = ({ navigation }: ScreenProp) => {
         height={getHeight(60)}
         width={getWidth(327)}
       />
-      <TouchableOpacity style={styles.forgotPasswordButton}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate('ForgotPassword')}
+        style={styles.forgotPasswordButton}
+      >
         <CryptoText
           fontSize={getWidth(13)}
           fontFamily={fontFamily.FONT_FAMILY_SEMI}

@@ -12,10 +12,12 @@ const Button = ({
   top,
   backgroundColor,
   onPress,
+  disabled,
 }: ButtonProp) => {
   return (
     <TouchableOpacity
       onPress={onPress}
+      disabled={disabled ? true : false}
       style={{
         height: getHeight(height),
         width: getWidth(width),
@@ -24,9 +26,9 @@ const Button = ({
         marginTop: 'auto',
         marginBottom: bottom,
         borderRadius: getWidth(30),
-        borderColor: color.PRIMARY_BLUE,
+        borderColor: disabled ? color.LIGHT_GRAY : color.PRIMARY_BLUE,
         borderWidth: getWidth(1),
-        backgroundColor,
+        backgroundColor: disabled ? color.LIGHT_GRAY : backgroundColor,
       }}
     >
       <Text

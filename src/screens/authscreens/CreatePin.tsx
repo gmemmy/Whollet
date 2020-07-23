@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native'
+import { View, StyleSheet, Text, TouchableOpacity, Image } from 'react-native'
 import color from '../../utils/colors'
 import { getHeight, getWidth, fontFamily } from '../../utils/styles'
 import {
@@ -11,11 +11,13 @@ import {
 
 // components
 import CryptoText from '../../components/Text'
+import Button from '../../components/Button'
 
 const CELL_COUNT = 4
 
-const Verification = ({ navigation }: ScreenProp) => {
+const CreatePin = ({ navigation }: ScreenProp) => {
   const [value, setValue] = useState('')
+  const [inputIndex, setInputIndex] = useState(1)
   const ref = useBlurOnFulfill({ value, cellCount: CELL_COUNT })
   const [props, getCellOnLayoutHandler] = useClearByFocusCell({
     value,
@@ -38,15 +40,17 @@ const Verification = ({ navigation }: ScreenProp) => {
           fontSize={getWidth(27)}
           fontFamily={fontFamily.FONT_FAMILY_SEMI}
         >
-          Verification Required
+          Create a PIN
         </CryptoText>
-        <CryptoText
-          color={color.DARK_GRAY}
-          fontFamily={fontFamily.FONT_FAMILY_LIGHT}
-          fontSize={getWidth(16)}
-        >
-          Please enter your PIN to proceed
-        </CryptoText>
+        <View style={styles.subHeader}>
+          <CryptoText
+            color={color.DARK_GRAY}
+            fontFamily={fontFamily.FONT_FAMILY_LIGHT}
+            fontSize={getWidth(16)}
+          >
+            Enhance the security of your account by creating a PIN code
+          </CryptoText>
+        </View>
       </View>
       <CodeField
         ref={ref}
@@ -63,9 +67,22 @@ const Verification = ({ navigation }: ScreenProp) => {
             onLayout={getCellOnLayoutHandler(index)}
           >
             {symbol || (isFocused ? <Cursor /> : null)}
+            {setInputIndex(index)}
           </Text>
         )}
       />
+      <View style={styles.bottomContainer}>
+        <Button
+          buttonText="Proceed"
+          buttonTextColor={color.WHITE}
+          height={46}
+          bottom={15}
+          width={200}
+          backgroundColor={color.PRIMARY_BLUE}
+          disabled={inputIndex < 4 ? true : false}
+          onPress={() => navigation.navigate('SignUp')}
+        />
+      </View>
     </View>
   )
 }
@@ -97,6 +114,10 @@ const styles = StyleSheet.create({
     left: getWidth(45),
     alignItems: 'center',
   },
+  subHeader: {
+    width: getWidth(330),
+    marginTop: getHeight(5),
+  },
   backButtonImage: {
     resizeMode: 'contain',
     height: getHeight(27),
@@ -110,6 +131,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  bottomContainer: {
+    marginTop: 'auto',
+    marginBottom: getHeight(50),
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
 })
 
-export default Verification
+export default CreatePin

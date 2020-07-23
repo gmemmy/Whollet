@@ -17,6 +17,7 @@ const Authentication = ({
   buttonText,
   accountVerificationText,
   authSwitchButtonText,
+  finishButtonNavigation,
 }: any) => {
   return (
     <KeyboardShift>
@@ -41,7 +42,7 @@ const Authentication = ({
             bottom={15}
             width={200}
             backgroundColor={color.PRIMARY_BLUE}
-            onPress={() => navigation.navigate('Verification')}
+            onPress={() => navigation.navigate(finishButtonNavigation)}
           />
           <View style={styles.signupContainer}>
             <CryptoText

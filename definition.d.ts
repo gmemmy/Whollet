@@ -34,6 +34,7 @@ interface ButtonProp {
   onPress: function,
   position?: string
   top?: number
+  disabled?: boolean
 }
 
 interface TextInputProp {
@@ -41,4 +42,5 @@ interface TextInputProp {
   height: number,
   width: number,
   icons?: Array,
+  fontSize?: number
 }
