@@ -9,6 +9,7 @@ import SignUp from './screens/AuthScreens/Signup'
 import Login from './screens/AuthScreens/Login'
 import Verification from './screens/AuthScreens/Verification'
 import CreatePin from './screens/AuthScreens/CreatePin'
+import ForgotPassword from './screens/AuthScreens/ForgotPassword'
 
 const Stack = createStackNavigator()
 
@@ -22,6 +23,7 @@ const Navigator = () => {
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Verification" component={Verification} />
         <Stack.Screen name="CreatePin" component={CreatePin} />
+        <Stack.Screen name="ForgotPassword" component={ForgotPassword} />
       </Stack.Navigator>
     </NavigationContainer>
   )

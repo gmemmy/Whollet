@@ -14,6 +14,7 @@ const CryptoTextInput = ({
   height,
   width,
   icons,
+  fontSize,
 }: TextInputProp) => {
   const [passwordIcon, setPasswordIcon] = useState(icons ? icons[1] : null)
   const [hidePassword, setHidePassword] = useState(true)
@@ -36,6 +37,7 @@ const CryptoTextInput = ({
           top: getHeight(7),
           width: getWidth(300),
           height: getHeight(40),
+          fontSize: getHeight(19) || fontSize,
         }}
       />
       {icons && (

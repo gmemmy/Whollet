@@ -42,4 +42,5 @@ interface TextInputProp {
   height: number,
   width: number,
   icons?: Array,
+  fontSize?: number
 }

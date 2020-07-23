@@ -90,7 +90,7 @@ const CreatePin = ({ navigation }: ScreenProp) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: color.WHITE,
+    backgroundColor: color.SKY_BLUE,
   },
   codeFiledRoot: {
     marginTop: getHeight(200),
