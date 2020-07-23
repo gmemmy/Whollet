@@ -54,7 +54,7 @@ const ForgotPassword = ({ navigation }: ScreenProp) => {
           bottom={60}
           width={200}
           backgroundColor={color.PRIMARY_BLUE}
-          onPress={() => navigation.navigate('ForgotPassword')}
+          onPress={() => navigation.navigate('CheckEmail')}
         />
       </View>
     </View>
